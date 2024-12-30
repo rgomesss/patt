@@ -23,7 +23,7 @@ const JogoDaMemoriaConteudo = () => {
   return (
     <div className="jogo-da-memoria">
       <div className="jogo-da-memoria__conteudo">
-        <h1>Jogo da Memória</h1>
+        <h1>Jogo da patt@patt</h1>
         <Placar />
         {cartas?.length === 0 ? (
           <p>Carregando cartas...</p>
