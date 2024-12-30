@@ -45,7 +45,7 @@ export const Resultado = () => {
         </button>
         <p>
           <small>
-            * Essa análise é ilustrativa e não possui base científica.
+            * Não culpe o criador do jogo pelas fotos
           </small>
         </p>
       </div>

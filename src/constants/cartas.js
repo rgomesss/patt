@@ -2,7 +2,7 @@ const imagens = [
   "patricia01.jpg",
   "patricia02.png",
   "patricia03.png",
-  "patricia04.jpg",
+  "patricia13.png",
   "patricia05.jpg",
   "patricia06.jpg",
 ];
