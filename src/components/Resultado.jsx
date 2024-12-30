@@ -16,7 +16,7 @@ export const Resultado = () => {
     [idsDosParesEncontrados.length]
   );
 
-  const taxaDeAcertos = (cartas.length / quantidadeDeCartasViradas ?? 1) * 100;
+  const taxaDeAcertos = (cartas.length / quantidadeDeCartasViradas) * 100;
 
   const resultado = useMemo(
     () => resultados.find(({ min }) => min < taxaDeAcertos),
