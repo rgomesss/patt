@@ -45,7 +45,7 @@ export const Resultado = () => {
         </button>
         <p>
           <small>
-            * Não culpe o criador do jogo pelas fotos
+            * Não culpe o dev do jogo pelas fotos
           </small>
         </p>
       </div>
