@@ -27,11 +27,27 @@
   font-family: Arial, sans-serif;
 }
 
-.celebration h1 {
-  font-size: 3rem;
-  animation: fadeIn 3s ease-in-out;
+.celebration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Adiciona espaçamento interno */
 }
 
+.celebration h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+  margin: 0 0 20px 0; /* Adiciona margem abaixo do texto */
+}
+
+/* Fogos de artifício */
 .fireworks {
   position: absolute;
   width: 100%;
@@ -41,6 +57,7 @@
   z-index: 1;
 }
 
+/* Balões */
 .balloons {
   position: absolute;
   bottom: 0;
@@ -51,6 +68,59 @@
   z-index: 2;
 }
 
+/* Ajustes para dispositivos móveis pequenos (smartphones antigos e telas menores) */
+@media (max-width: 480px) {
+  .celebration h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+  }
+
+  .celebration {
+    padding: 10px;
+  }
+}
+
+/* Ajustes para smartphones médios (ex.: iPhone 6/7/8, Galaxy S8) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .celebration h1 {
+    font-size: 2.2rem;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+  }
+
+  .celebration {
+    padding: 15px;
+  }
+}
+
+/* Ajustes para tablets e celulares grandes (ex.: iPhone 13 Pro Max, Galaxy Note) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .celebration h1 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+  }
+
+  .celebration {
+    padding: 20px;
+  }
+}
+
+/* Ajustes para desktops pequenos e tablets maiores */
+@media (min-width: 1025px) {
+  .celebration h1 {
+    font-size: 3rem;
+    margin: 0 0 25px 0;
+    line-height: 1.7;
+  }
+
+  .celebration {
+    padding: 25px;
+  }
+}
+
+/* Animação de fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;
