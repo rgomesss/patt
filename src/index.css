@@ -14,121 +14,112 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+/* Animação de Celebração */
 .celebration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-  position: relative;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.celebration {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-  position: relative;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  padding: 20px; /* Adiciona espaçamento interno */
+  flex-direction: column;
+  color: white;
+  opacity: 1;
+  animation: celebration-enter 1s ease-out;
 }
 
 .celebration h1 {
   font-size: 3rem;
-  animation: fadeIn 2s ease-in-out;
-  margin: 0 0 20px 0; /* Adiciona margem abaixo do texto */
+  margin: 0;
+  text-align: center;
 }
 
-/* Fogos de artifício */
-.fireworks {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('/path/to/fireworks.gif') no-repeat center center;
-  background-size: cover;
-  z-index: 1;
-}
-
-/* Balões */
+.fireworks,
 .balloons {
   position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 50%;
-  background: url('/path/to/balloons.gif') no-repeat center center;
+  height: 50px;
   background-size: contain;
-  z-index: 2;
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
-/* Ajustes para dispositivos móveis pequenos (smartphones antigos e telas menores) */
-@media (max-width: 480px) {
-  .celebration h1 {
-    font-size: 1.8rem;
-    margin: 0 0 10px 0;
-    line-height: 1.4;
-  }
-
-  .celebration {
-    padding: 10px;
-  }
+/* Animação dos Fogos de Artifício */
+.fireworks {
+  top: 10%;
+  background: url('https://path-to-your-fireworks-image.gif') no-repeat center center;
+  background-size: 200px;
+  animation: fireworks-animation 3s ease-in-out infinite;
 }
 
-/* Ajustes para smartphones médios (ex.: iPhone 6/7/8, Galaxy S8) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .celebration h1 {
-    font-size: 2.2rem;
-    margin: 0 0 15px 0;
-    line-height: 1.5;
-  }
-
-  .celebration {
-    padding: 15px;
-  }
-}
-
-/* Ajustes para tablets e celulares grandes (ex.: iPhone 13 Pro Max, Galaxy Note) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .celebration h1 {
-    font-size: 2.5rem;
-    margin: 0 0 20px 0;
-    line-height: 1.6;
-  }
-
-  .celebration {
-    padding: 20px;
-  }
-}
-
-/* Ajustes para desktops pequenos e tablets maiores */
-@media (min-width: 1025px) {
-  .celebration h1 {
-    font-size: 3rem;
-    margin: 0 0 25px 0;
-    line-height: 1.7;
-  }
-
-  .celebration {
-    padding: 25px;
-  }
-}
-
-/* Animação de fade-in */
-@keyframes fadeIn {
-  from {
+@keyframes fireworks-animation {
+  0% {
     opacity: 0;
+    transform: translateY(-20px) scale(0.8);
   }
-  to {
+  50% {
     opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
   }
 }
+
+/* Animação dos Balões */
+.balloons {
+  top: 25%;
+  background: url('') no-repeat center center;
+  background-size: contain;
+  animation: balloons-animation 6s ease-in-out infinite;
+}
+
+@keyframes balloons-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de entrada */
+@keyframes celebration-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes celebration-exit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.Celebration {
+  animation: celebration-enter 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
 
 
 a {
