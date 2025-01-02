@@ -35,7 +35,22 @@
   font-size: 3rem;
   margin: 0;
   text-align: center;
+  word-wrap: break-word; /* Quebra as palavras se necessário */
 }
+
+@media (max-width: 768px) {
+  .celebration h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+    padding: 0 1rem; /* Adiciona espaçamento para evitar corte */
+  }
+}
+
+@media (max-width: 480px) {
+  .celebration h1 {
+    font-size: 1.5rem; /* Ajuste ainda menor para dispositivos muito pequenos */
+  }
+}
+
 
 .fireworks,
 .balloons {
