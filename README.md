@@ -1,2 +1,4 @@
 #JOGO DA MEMORIA <br>
-feito para presentiar uma amiga
+Esse foi meu primeiro projeto usando React.
+
+O projeto foi feito para presentiar uma amiga.
